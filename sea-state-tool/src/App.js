@@ -4,6 +4,8 @@ import './App.css';
 import { HOME, TOOL, ABOUT } from './utils/constants'
 import Header from './components/header/Header';
 import HomePage from './components/homePage/HomePage';
+import ToolPage from './components/toolPage/ToolPage';
+import AboutPage from './components/aboutPage/AboutPage';
 
 function App() {
     return (
@@ -16,7 +18,12 @@ function App() {
                     </>
                 }/>
                 <Route path="/tool" element={<Header currentPage={TOOL} />} />
-                <Route path="/about" element={<Header currentPage={ABOUT} />} />
+                <Route path="/about" element={
+                    <>
+                        <Header currentPage={ABOUT} />
+                        <AboutPage />
+                    </>
+                } />
             </Routes>
         </BrowserRouter>    
     );

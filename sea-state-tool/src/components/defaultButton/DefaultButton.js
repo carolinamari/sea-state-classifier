@@ -2,9 +2,9 @@ import React from 'react'
 
 import './defaultButton.css'
 
-const DefaultButton = ({ name, onClick }) => {
+const DefaultButton = ({ name, onClick, style }) => {
     return (
-        <button className='default-button' onClick={onClick}>{name}</button>
+        <button className='default-button' onClick={onClick} style={style}>{name}</button>
     )
 }
 

@@ -13,6 +13,25 @@ export const TUTORIAL_STEP_2 = 'Arraste uma imagem para a área indicada ou carr
 export const TUTORIAL_STEP_3 = 'Clique no botão ”Classificar”.'
 export const TUTORIAL_STEP_4 = 'Observe o intervalo da Escala Beaufort predito pelo classificador e suas informações correspondentes associadas à imagem carregada.'
 
+// Tool page - upload image
+export const UPLOAD_IMAGE_TITLE = 'Carregue uma imagem'
+export const SUPPORTED_FORMATS = 'Formatos suportados: PNG e JPEG'
+export const DRAG_AND_DROP_TEXT = 'Arraste e solte uma imagem aqui ou'
+export const UPLOAD_IMAGE_BUTTON = 'Selecione uma imagem'
+export const MAX_FILE_NAME_LENGTH = 35
+
+// Tool page - results
+export const NEW_IMAGE_BUTTON = 'Carregue uma nova imagem'
+export const PREDICTED_BS_INTERVAL_TITLE = 'Intervalo estimado da Escala Beaufort'
+export const CLASS_LABEL = 'Classe'
+export const DESCRIPTION_LABEL = 'Descrição'
+export const WIND_SPEED_LABEL = 'Velocidade do vento'
+export const WAVE_HEIGHT_LABEL = 'Altura média das ondas'
+export const SEA_APPEARANCE_LABEL = 'Aspecto do mar'
+export const PREDICTED_PROBABILITIES_TITLE = 'Probabilidades'
+export const SIMILAR_IMAGES_TITLE = 'Imagens similares'
+export const SIMILAR_IMAGES_INFO = 'Exemplos de imagens catalogadas pelo modelo como pertencentes a mesma classe da imagem carregada.'
+
 // About page
 export const PROJECT_NAME = 'Ferramenta para estimação do estado do mar a partir do processamento de imagens'
 export const PROJECT_SUMMARY = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non porttitor urna. Aliquam venenatis magna in eros faucibus, a finibus ex facilisis. Pellentesque placerat dolor ac augue fermentum, eget semper nisi molestie. Nam ut libero accumsan, fermentum purus vitae, rutrum risus. Proin eleifend lectus justo, in malesuada nisi pellentesque in. Sed lobortis efficitur dui quis suscipit.'

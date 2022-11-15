@@ -17,7 +17,12 @@ function App() {
                         <HomePage />
                     </>
                 }/>
-                <Route path="/tool" element={<Header currentPage={TOOL} />} />
+                <Route path="/tool" element={
+                    <>
+                        <Header currentPage={TOOL} />
+                        <ToolPage />
+                    </>
+                }/>
                 <Route path="/about" element={
                     <>
                         <Header currentPage={ABOUT} />

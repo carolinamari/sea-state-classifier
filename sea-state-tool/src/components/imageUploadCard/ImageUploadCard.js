@@ -119,7 +119,13 @@ const ImageUploadCard = ({ setHasUploaded, setImageURL, setClassId, setClassRang
                     setApiError(true)
                     return
                 }
-            }).then(data => {
+            })
+            .catch(error => {
+                console.log(error)
+                setIsLoading(false)
+                setApiError(true)
+            })
+            .then(data => {
                 setIsLoading(false)
                 if (data) {
                     console.log(data)

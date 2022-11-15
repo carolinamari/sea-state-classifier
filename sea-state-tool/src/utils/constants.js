@@ -19,6 +19,8 @@ export const SUPPORTED_FORMATS = 'Formatos suportados: PNG e JPEG'
 export const DRAG_AND_DROP_TEXT = 'Arraste e solte uma imagem aqui ou'
 export const UPLOAD_IMAGE_BUTTON = 'Selecione uma imagem'
 export const MAX_FILE_NAME_LENGTH = 35
+export const FILE_UPLOAD_ERROR_TITLE = 'Erro ao importar'
+export const FILE_UPLOAD_ERROR_MESSAGE = 'O formato do arquivo não é suportado. Por favor, certifique-se de que a imagem possui extensão .png ou .jpeg e tente novamente.'
 
 // Tool page - results
 export const NEW_IMAGE_BUTTON = 'Carregue uma nova imagem'

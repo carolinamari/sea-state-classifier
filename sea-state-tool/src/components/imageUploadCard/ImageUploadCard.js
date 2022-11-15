@@ -6,10 +6,13 @@ import 'primeicons/primeicons.css';
 import { UPLOAD_IMAGE_TITLE, SUPPORTED_FORMATS, DRAG_AND_DROP_TEXT, UPLOAD_IMAGE_BUTTON, MAX_FILE_NAME_LENGTH } from '../../utils/constants'
 import { FileUpload } from 'primereact/fileupload';
 import DefaultButton from '../defaultButton/DefaultButton';
+import validateSelectedImage from '../../utils/validateSelectedImage'
+import ImageUploadErrorModal from '../imageUploadErrorModal/ImageUploadErrorModal';
 
 
 const ImageUploadCard = ({ setHasUploaded, setImageURL }) => {
     const [hasSelected, setHasSelected] = useState(false)
+    const [error, setError] = useState(false)
 
     const fileUploadRef = useRef(null);
 
@@ -19,6 +22,10 @@ const ImageUploadCard = ({ setHasUploaded, setImageURL }) => {
     const buttonStyle = {
         fontWeight: 500,
         fontSize: '1.2vw'
+    }
+
+    const onErrorModalHide = () => {
+        setError(false)
     }
 
     const headerTemplate = (options) => {
@@ -63,8 +70,14 @@ const ImageUploadCard = ({ setHasUploaded, setImageURL }) => {
     };
 
     const onTemplateSelect = (e) => {
-        setImageURL(e.files[0].objectURL)
-        setHasSelected(true)
+        const file = e.files[0]
+        if (validateSelectedImage(file)) {
+            setImageURL(file.objectURL)
+            setHasSelected(true)
+        } else {
+            fileUploadRef.current.clear()
+            setError(true)
+        }
     }
 
     const onTemplateRemove = (e) => {
@@ -102,6 +115,7 @@ const ImageUploadCard = ({ setHasUploaded, setImageURL }) => {
                 chooseOptions={chooseOptions}
                 cancelOptions={cancelOptions}
             />
+            <ImageUploadErrorModal error={error} onHide={onErrorModalHide} />
         </div>
     )
 }

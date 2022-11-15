@@ -1,3 +1,12 @@
+@keyframes modal-enter-animation {
+    0% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}
+
 .modal-container {
     width: 27vw;
     padding: 4vh 2vw;
@@ -70,7 +79,7 @@
 }
 
 .p-component-overlay-enter {
-    animation: p-component-overlay-enter-animation 150ms forwards;
+    animation: modal-enter-animation 150ms forwards;
 }
 
 .p-component-overlay {

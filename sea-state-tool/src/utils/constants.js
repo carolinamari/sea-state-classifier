@@ -15,12 +15,14 @@ export const TUTORIAL_STEP_4 = 'Observe o intervalo da Escala Beaufort predito p
 
 // Tool page - upload image
 export const UPLOAD_IMAGE_TITLE = 'Carregue uma imagem'
-export const SUPPORTED_FORMATS = 'Formatos suportados: PNG e JPEG'
+export const SUPPORTED_FORMATS = 'Formatos suportados: PNG, JPEG e TIFF'
 export const DRAG_AND_DROP_TEXT = 'Arraste e solte uma imagem aqui ou'
 export const UPLOAD_IMAGE_BUTTON = 'Selecione uma imagem'
 export const MAX_FILE_NAME_LENGTH = 35
 export const FILE_UPLOAD_ERROR_TITLE = 'Erro ao importar'
-export const FILE_UPLOAD_ERROR_MESSAGE = 'O formato do arquivo não é suportado. Por favor, certifique-se de que a imagem possui extensão .png ou .jpeg e tente novamente.'
+export const FILE_UPLOAD_ERROR_MESSAGE = 'O formato do arquivo não é suportado. Por favor, certifique-se de que a imagem possui extensão .png, .jpeg ou .tif e tente novamente.'
+export const API_RESPONSE_ERROR_TITLE = 'Atenção!'
+export const API_RESPONSE_ERROR_MESSAGE = 'Houve um erro em sua requisição, tente novamente mais tarde.'
 
 // Tool page - results
 export const NEW_IMAGE_BUTTON = 'Carregue uma nova imagem'

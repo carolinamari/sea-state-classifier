@@ -20,7 +20,7 @@ export const ProbabilityChart = ({ classId, probabilities }) => {
 
     return (
         <div style={{height: '32vh'}}>
-            <ResponsiveContainer width="95%" height='100%'>
+            <ResponsiveContainer width="85%" height='100%'>
                 <BarChart
                 width={500}
                 height={300}
@@ -47,11 +47,11 @@ export const ProbabilityChart = ({ classId, probabilities }) => {
                     <Bar 
                     dataKey='p' 
                     maxBarSize={30} 
-                    radius={10} 
+                    radius={15} 
                     background={false}
                     label={barLabelFormatter}
                     >
-                        <LabelList dataKey="p" position="right" formatter={(value) =>  Math.round(value * 100.0) / 100.0 + '%'}/>
+                        <LabelList dataKey="p" position="right" formatter={(value) =>  Math.round(value * 100.0) / 100.0 + '%'} style={{ fontSize: '1vw' }}/>
                         { probabilities.map((entry, index) => index === classId - 1 ?
                         <Cell key={`cell-${index}`} fill='#24AEBB' /> :
                         <Cell key={`cell-${index}`} fill='#FFFFFF' />)
